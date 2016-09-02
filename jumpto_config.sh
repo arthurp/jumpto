@@ -24,4 +24,4 @@ function jp {
     cd "$($DIR/jumpto.sh $@)"
 }
 
-complete -F _jp_compete -o plusdirs jp
+complete -F _jp_compete -o plusdirs -o filenames -o nospace jp
