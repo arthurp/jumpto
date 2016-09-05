@@ -1,5 +1,7 @@
 # jumpto
 A set of bash scripts which allow jumping to directories in favorite locations quickly.
+This makes this extremely similar to [Bourne Shell's CDPATH](https://www.gnu.org/software/bash/manual/bash.html#index-cd).
+You should probably use that unless you need `jumpto`'s ability to have partial directory names in the `PATH` or you want to be able to modify the system without hacking on your shell internals.
 
 Configure it as follows:
 ```[bash]
