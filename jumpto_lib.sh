@@ -20,7 +20,7 @@ function checkAndAddPossibility() {
         v="$t"
     fi
     if [ -d "$t" ] && elementNotIn "$v" "${possibilities[@]}" ; then
-        possibilities+=("$v")
+        possibilities+=("$v/")
         return 0
     fi
     return 1
