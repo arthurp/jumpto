@@ -1,6 +1,6 @@
 #! /bin/bash
 
-DIR="$(readlink -f "$(dirname "$BASH_SOURCE")")"
+DIR="$(readlink "$(dirname "$BASH_SOURCE")" || dirname "$BASH_SOURCE")"
 
 . "$DIR/jumpto_lib.sh"
 
