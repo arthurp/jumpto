@@ -1,6 +1,10 @@
 #! /bin/bash
+READLINK=readlink
+if command -v greadlink > /dev/null; then
+    READLINK=greadlink
+fi
 
-DIR="$(readlink "$(dirname "$BASH_SOURCE")" || dirname "$BASH_SOURCE")"
+DIR="$($READLINK -f "$(dirname "$BASH_SOURCE")" || dirname "$BASH_SOURCE")"
 
 . "$DIR/jumpto_lib.sh"
 

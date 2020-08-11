@@ -13,7 +13,7 @@ possibilities=()
 
 function checkAndAddPossibility() {
     t="$1"
-    t="$(readlink "$t")"
+    t="$($READLINK -f "$t")"
     if [ "$#" -eq 2 ]; then
         v="$2"
     else
